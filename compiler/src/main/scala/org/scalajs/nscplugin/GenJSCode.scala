@@ -2798,7 +2798,7 @@ abstract class GenJSCode[G <: Global with Singleton](val global: G)
       info.generatedReturns match {
         case 0 =>
           /* There are no jumps to the loop label. Therefore we can remove
-           * the labeled block and and the loop altogether.
+           * the labeled block and the loop altogether.
            * This happens for `while (false)` and `do while (false)` loops.
            */
           transformedRhs
