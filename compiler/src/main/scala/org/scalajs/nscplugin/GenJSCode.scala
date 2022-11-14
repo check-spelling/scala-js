@@ -5620,7 +5620,7 @@ abstract class GenJSCode[G <: Global with Singleton](val global: G)
           jsSuperClassValue :: args), Nil)
     }
 
-    /** Gen actual actual arguments to Scala method call.
+    /** Gen actual arguments to Scala method call.
      *
      *  Returns a list of the transformed arguments.
      *
@@ -5737,7 +5737,7 @@ abstract class GenJSCode[G <: Global with Singleton](val global: G)
       }
     }
 
-    /** Gen actual actual arguments to a primitive JS call.
+    /** Gen actual arguments to a primitive JS call.
      *
      *  * Repeated arguments (varargs) are expanded
      *  * Default arguments are omitted or replaced by undefined
