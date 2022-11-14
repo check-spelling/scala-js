@@ -45,7 +45,7 @@ sealed abstract class BufferAdapter[BT <: Buffer, ET] {
 }
 
 object BufferAdapter {
-  class ByteBufferAdapater(val buffer: ByteBuffer)
+  class ByteBufferAdapter(val buffer: ByteBuffer)
       extends BufferAdapter[ByteBuffer, Byte] {
     def sliceChain(): BufferType = buffer.slice()
     def duplicateChain(): BufferType = buffer.duplicate()
@@ -69,7 +69,7 @@ object BufferAdapter {
     def order(): ByteOrder = buffer.order()
   }
 
-  class CharBufferAdapater(val buffer: CharBuffer)
+  class CharBufferAdapter(val buffer: CharBuffer)
       extends BufferAdapter[CharBuffer, Char] {
     def sliceChain(): BufferType = buffer.slice()
     def duplicateChain(): BufferType = buffer.duplicate()
@@ -93,7 +93,7 @@ object BufferAdapter {
     def order(): ByteOrder = buffer.order()
   }
 
-  class ShortBufferAdapater(val buffer: ShortBuffer)
+  class ShortBufferAdapter(val buffer: ShortBuffer)
       extends BufferAdapter[ShortBuffer, Short] {
     def sliceChain(): BufferType = buffer.slice()
     def duplicateChain(): BufferType = buffer.duplicate()
@@ -117,7 +117,7 @@ object BufferAdapter {
     def order(): ByteOrder = buffer.order()
   }
 
-  class IntBufferAdapater(val buffer: IntBuffer)
+  class IntBufferAdapter(val buffer: IntBuffer)
       extends BufferAdapter[IntBuffer, Int] {
     def sliceChain(): BufferType = buffer.slice()
     def duplicateChain(): BufferType = buffer.duplicate()
@@ -141,7 +141,7 @@ object BufferAdapter {
     def order(): ByteOrder = buffer.order()
   }
 
-  class LongBufferAdapater(val buffer: LongBuffer)
+  class LongBufferAdapter(val buffer: LongBuffer)
       extends BufferAdapter[LongBuffer, Long] {
     def sliceChain(): BufferType = buffer.slice()
     def duplicateChain(): BufferType = buffer.duplicate()
@@ -165,7 +165,7 @@ object BufferAdapter {
     def order(): ByteOrder = buffer.order()
   }
 
-  class FloatBufferAdapater(val buffer: FloatBuffer)
+  class FloatBufferAdapter(val buffer: FloatBuffer)
       extends BufferAdapter[FloatBuffer, Float] {
     def sliceChain(): BufferType = buffer.slice()
     def duplicateChain(): BufferType = buffer.duplicate()
@@ -189,7 +189,7 @@ object BufferAdapter {
     def order(): ByteOrder = buffer.order()
   }
 
-  class DoubleBufferAdapater(val buffer: DoubleBuffer)
+  class DoubleBufferAdapter(val buffer: DoubleBuffer)
       extends BufferAdapter[DoubleBuffer, Double] {
     def sliceChain(): BufferType = buffer.slice()
     def duplicateChain(): BufferType = buffer.duplicate()

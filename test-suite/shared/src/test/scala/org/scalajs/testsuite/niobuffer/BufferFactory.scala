@@ -79,7 +79,7 @@ object BufferFactory {
 
     implicit def bufferAdapter(
         buffer: BufferType): BufferAdapter[BufferType, ElementType] =
-      new BufferAdapter.ByteBufferAdapater(buffer)
+      new BufferAdapter.ByteBufferAdapter(buffer)
   }
 
   abstract class CharBufferFactory extends BufferFactory {
@@ -94,7 +94,7 @@ object BufferFactory {
 
     implicit def bufferAdapter(
         buffer: BufferType): BufferAdapter[BufferType, ElementType] =
-      new BufferAdapter.CharBufferAdapater(buffer)
+      new BufferAdapter.CharBufferAdapter(buffer)
   }
 
   abstract class ShortBufferFactory extends BufferFactory {
@@ -109,7 +109,7 @@ object BufferFactory {
 
     implicit def bufferAdapter(
         buffer: BufferType): BufferAdapter[BufferType, ElementType] =
-      new BufferAdapter.ShortBufferAdapater(buffer)
+      new BufferAdapter.ShortBufferAdapter(buffer)
   }
 
   abstract class IntBufferFactory extends BufferFactory {
@@ -124,7 +124,7 @@ object BufferFactory {
 
     implicit def bufferAdapter(
         buffer: BufferType): BufferAdapter[BufferType, ElementType] =
-      new BufferAdapter.IntBufferAdapater(buffer)
+      new BufferAdapter.IntBufferAdapter(buffer)
   }
 
   abstract class LongBufferFactory extends BufferFactory {
@@ -139,7 +139,7 @@ object BufferFactory {
 
     implicit def bufferAdapter(
         buffer: BufferType): BufferAdapter[BufferType, ElementType] =
-      new BufferAdapter.LongBufferAdapater(buffer)
+      new BufferAdapter.LongBufferAdapter(buffer)
   }
 
   abstract class FloatBufferFactory extends BufferFactory {
@@ -154,7 +154,7 @@ object BufferFactory {
 
     implicit def bufferAdapter(
         buffer: BufferType): BufferAdapter[BufferType, ElementType] =
-      new BufferAdapter.FloatBufferAdapater(buffer)
+      new BufferAdapter.FloatBufferAdapter(buffer)
   }
 
   abstract class DoubleBufferFactory extends BufferFactory {
@@ -169,7 +169,7 @@ object BufferFactory {
 
     implicit def bufferAdapter(
         buffer: BufferType): BufferAdapter[BufferType, ElementType] =
-      new BufferAdapter.DoubleBufferAdapater(buffer)
+      new BufferAdapter.DoubleBufferAdapter(buffer)
   }
 
   trait WrappedBufferFactory extends BufferFactory {

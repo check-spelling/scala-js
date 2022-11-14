@@ -30,7 +30,7 @@ object QuickLinker {
 
     val moduleInitializers = {
       build.TestSuiteLinkerOptions.moduleInitializers :+
-      // Copied from org.scalajs.testing.adapter.TestAdapaterInitializer.
+      // Copied from org.scalajs.testing.adapter.TestAdapterInitializer.
       ModuleInitializer.mainMethod("org.scalajs.testing.bridge.Bridge", "start")
     }
 
