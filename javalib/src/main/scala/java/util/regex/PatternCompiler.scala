@@ -317,7 +317,7 @@ private[regex] object PatternCompiler {
    *
    *  This is a `js.Map` (and a lazy val) because it is only used when `\\p` is
    *  already known to be supported by the underlying `js.RegExp` (ES 2018),
-   *  and we assume that that implies that `js.Map` is supported (ES 2015).
+   *  and we assume that implies that `js.Map` is supported (ES 2015).
    */
   private lazy val predefinedPCharacterClasses: js.Map[String, CompiledCharClass] = {
     import CompiledCharClass._
@@ -468,7 +468,7 @@ private[regex] object PatternCompiler {
    *
    *  This is a `js.Map` (and a lazy val) because it is only used when `\\p` is
    *  already known to be supported by the underlying `js.RegExp` (ES 2018),
-   *  and we assume that that implies that `js.Map` is supported (ES 2015).
+   *  and we assume that implies that `js.Map` is supported (ES 2015).
    */
   private lazy val canonicalizedScriptNameCache: js.Map[String, String] = {
     val result = new js.Map[String, String]()

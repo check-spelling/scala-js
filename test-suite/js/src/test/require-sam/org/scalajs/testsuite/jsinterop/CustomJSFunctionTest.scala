@@ -46,7 +46,7 @@ class CustomJSFunctionTest {
   }
 
   @Test def customJSFunctionsCallingConvention(): Unit = {
-    /* This test makes sure that that the custom JS function types, whose
+    /* This test makes sure that the custom JS function types, whose
      * implementations are tested in the test above, indeed behave at call
      * site with the right semantics. Otherwise, we could have two-way mistakes
      * that hide each other.
