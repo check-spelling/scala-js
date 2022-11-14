@@ -180,7 +180,7 @@ class ReflectTest {
       assertEquals(42, instanceShort.x)
       assertEquals(name.stripPrefix(Prefix), instanceShort.y)
 
-      // Non-existent
+      // Nonexistent
       assertFalse(classData.getConstructor(classOf[Boolean]).isDefined)
       assertFalse(classData.getConstructor(classOf[VC]).isDefined)
 

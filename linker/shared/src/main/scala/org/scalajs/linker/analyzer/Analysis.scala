@@ -220,7 +220,7 @@ object Analysis {
         ("Fatal error: cycle in inheritance chain involving " +
             encodedClassNames.map(_.nameString).mkString(", "))
       case MissingClass(info, _) =>
-        s"Referring to non-existent class ${info.displayName}"
+        s"Referring to nonexistent class ${info.displayName}"
       case InvalidSuperClass(superClassInfo, subClassInfo, _) =>
         s"${superClassInfo.displayName} (of kind ${superClassInfo.kind}) is " +
         s"not a valid super class of ${subClassInfo.displayName} (of kind " +
@@ -232,9 +232,9 @@ object Analysis {
       case NotAModule(info, _) =>
         s"Cannot access module for non-module ${info.displayName}"
       case MissingMethod(info, _) =>
-        s"Referring to non-existent method ${info.fullDisplayName}"
+        s"Referring to nonexistent method ${info.fullDisplayName}"
       case MissingJSNativeMember(info, name, _) =>
-        s"Referring to non-existent js native member ${info.displayName}.${name.displayName}"
+        s"Referring to nonexistent js native member ${info.displayName}.${name.displayName}"
       case ConflictingDefaultMethods(infos, _) =>
         s"Conflicting default methods: ${infos.map(_.fullDisplayName).mkString(" ")}"
       case InvalidTopLevelExportInScript(info) =>

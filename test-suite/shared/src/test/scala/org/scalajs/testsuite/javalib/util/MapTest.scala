@@ -1217,8 +1217,8 @@ trait MapTest {
   @Test def testConditionalRemove(): Unit = {
     val mp = factory.fromKeyValuePairs("ONE" -> "one", "TWO" -> "two", "THREE" -> "three")
 
-    assertFalse(mp.remove("non existing", "value"))
-    assertFalse(mp.containsKey("non existing"))
+    assertFalse(mp.remove("nonexistent", "value"))
+    assertFalse(mp.containsKey("nonexistent"))
 
     assertFalse(mp.remove("TWO", "one"))
     assertEquals("two", mp.get("TWO"))
@@ -1253,8 +1253,8 @@ trait MapTest {
   @Test def testUnconditionalRemove(): Unit = {
     val mp = factory.fromKeyValuePairs("ONE" -> "one", "TWO" -> "two", "THREE" -> "three")
 
-    assertEquals(null, mp.remove("non existing"))
-    assertFalse(mp.containsKey("non existing"))
+    assertEquals(null, mp.remove("nonexistent"))
+    assertFalse(mp.containsKey("nonexistent"))
 
     assertEquals("two", mp.remove("TWO"))
     assertEquals(null, mp.get("TWO"))
@@ -1276,8 +1276,8 @@ trait MapTest {
     assertEquals("four", mp.get("ONE"))
     assertFalse(mp.replace("TWO", "not two", "five"))
     assertEquals("two", mp.get("TWO"))
-    assertFalse(mp.replace("non existing", "foo", "bar"))
-    assertFalse(mp.containsKey("non existing"))
+    assertFalse(mp.replace("nonexistent", "foo", "bar"))
+    assertFalse(mp.containsKey("nonexistent"))
 
     if (factory.allowsNullValues) {
       assertFalse(mp.replace("ONE", null, "new value"))
@@ -1315,8 +1315,8 @@ trait MapTest {
     assertEquals("four", mp.get("ONE"))
     assertEquals("two", mp.get("TWO"))
 
-    assertNull(mp.replace("non existing", "value"))
-    assertFalse(mp.containsKey("non existing"))
+    assertNull(mp.replace("nonexistent", "value"))
+    assertFalse(mp.containsKey("nonexistent"))
 
     if (factory.allowsNullValues) {
       assertEquals("four", mp.replace("ONE", null))
@@ -1362,8 +1362,8 @@ trait MapTest {
     assertEquals("5", mp.computeIfAbsent("SEVEN", lengthAsString))
     assertEquals("5", mp.get("SEVEN"))
 
-    assertNull(mp.computeIfAbsent("non existing", returnsNull))
-    assertFalse(mp.containsKey("non existing"))
+    assertNull(mp.computeIfAbsent("nonexistent", returnsNull))
+    assertFalse(mp.containsKey("nonexistent"))
 
     if (factory.allowsNullValues) {
       mp.put("nullable", null)
@@ -1394,8 +1394,8 @@ trait MapTest {
     assertNull(mp.computeIfPresent("ONE", returnsNull))
     assertFalse(mp.containsKey("ONE"))
 
-    assertNull(mp.computeIfPresent("non existing", notCalled))
-    assertFalse(mp.containsKey("non existing"))
+    assertNull(mp.computeIfPresent("nonexistent", notCalled))
+    assertFalse(mp.containsKey("nonexistent"))
 
     if (factory.allowsNullValues) {
       mp.put("nullable", null)
@@ -1422,8 +1422,8 @@ trait MapTest {
     assertEquals("SEVEN - null", mp.compute("SEVEN", remappingFun))
     assertEquals("SEVEN - null", mp.get("SEVEN"))
 
-    assertNull(mp.compute("non existing", returnsNull))
-    assertFalse(mp.containsKey("non existing"))
+    assertNull(mp.compute("nonexistent", returnsNull))
+    assertFalse(mp.containsKey("nonexistent"))
 
     assertNull(mp.compute("ONE", returnsNull))
     assertFalse(mp.containsKey("ONE"))
@@ -1461,7 +1461,7 @@ trait MapTest {
     assertEquals("def", mp.merge("SEVEN", "def", notCalled))
     assertEquals("def", mp.get("SEVEN"))
 
-    assertThrows(classOf[NullPointerException], mp.merge("non existing", null, notCalled))
+    assertThrows(classOf[NullPointerException], mp.merge("nonexistent", null, notCalled))
     assertThrows(classOf[NullPointerException], mp.merge("ONE", null, notCalled))
 
     assertNull(mp.merge("ONE", "def", returnsNull))

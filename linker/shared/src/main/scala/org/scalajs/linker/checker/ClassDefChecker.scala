@@ -449,7 +449,7 @@ private final class ClassDefChecker(classDef: ClassDef, reporter: ErrorReporter)
     val field = topLevelFieldExportDef.field
 
     fields(MemberNamespace.PublicStatic.ordinal).get(field.name).fold {
-      reportError(i"Cannot export non-existent static field '$field'")
+      reportError(i"Cannot export nonexistent static field '$field'")
     } { tpe =>
       if (tpe != AnyType)
         reportError(i"Cannot export field '$field' of type $tpe")

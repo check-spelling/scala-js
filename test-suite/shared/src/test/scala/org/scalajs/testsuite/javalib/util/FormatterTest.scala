@@ -1606,7 +1606,7 @@ class FormatterTest {
     assertF("0x1.5938p8", "%a", 345.21875f)
     assertF("0x1.594p8", "%.3a", 345.21875f) // round to even, upwards
 
-    /* Rounding, subnormal -- non-existent for Floats, since the smallest Float
+    /* Rounding, subnormal -- nonexistent for Floats, since the smallest Float
      * is already is a normal Double (see test case with
      * Float.MinPositiveValue).
      */

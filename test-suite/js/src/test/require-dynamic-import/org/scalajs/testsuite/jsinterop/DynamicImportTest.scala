@@ -36,7 +36,7 @@ class DynamicImportTest {
 
   @Test(expected = classOf[js.JavaScriptException])
   def testFailedImport(): AsyncResult = await {
-    js.`import`[js.Any]("non-existent-module").toFuture
+    js.`import`[js.Any]("nonexistent-module").toFuture
   }
 }
 

@@ -78,7 +78,7 @@ object RangeError extends js.Object {
 }
 
 /**
- * Represents an error when a non-existent variable is referenced.
+ * Represents an error when a nonexistent variable is referenced.
  *
  * A ReferenceError is thrown when trying to dereference a variable that has
  * not been declared.

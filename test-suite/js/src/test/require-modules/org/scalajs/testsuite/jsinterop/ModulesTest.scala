@@ -229,7 +229,7 @@ object ModulesTest {
 
   // #4001 - Test that unused super-classes are not imported.
   @js.native
-  @JSImport("non-existent.js", "Foo")
+  @JSImport("nonexistent.js", "Foo")
   class NonExistentSuperClass extends js.Object
 
   @js.native

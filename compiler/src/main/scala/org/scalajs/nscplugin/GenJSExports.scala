@@ -997,7 +997,7 @@ trait GenJSExports[G <: Global with Singleton] extends SubComponent {
 
     def genRestArgRef()(implicit pos: Position): js.Tree = {
       assert(needsRestParam,
-          s"trying to generate a reference to non-existent rest param at $pos")
+          s"trying to generate a reference to nonexistent rest param at $pos")
       js.VarRef(js.LocalIdent(restParamName))(jstpe.AnyType)
     }
 
