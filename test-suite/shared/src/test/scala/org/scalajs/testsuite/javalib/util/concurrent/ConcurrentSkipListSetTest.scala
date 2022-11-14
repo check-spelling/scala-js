@@ -53,7 +53,7 @@ class ConcurrentSkipListSetTest {
     assertThrows(classOf[NoSuchElementException], csls.first)
   }
 
-  @Test def adddRemoveString(): Unit = {
+  @Test def addRemoveString(): Unit = {
     val csls = factory.empty[String]
 
     assertEquals(0, csls.size())
