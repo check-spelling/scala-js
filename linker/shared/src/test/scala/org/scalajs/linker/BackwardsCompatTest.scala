@@ -31,7 +31,7 @@ import org.scalajs.linker.testutils.TestIRBuilder._
 /** Basic backwards compatibility test.
  *
  *  This does not replace the usual two-commit tests we do when introducing
- *  backwards compatibility hacks. But rather, it serves as addititional defense
+ *  backwards compatibility hacks. But rather, it serves as additional defense
  *  in depth.
  */
 class BackwardsCompatTest {
