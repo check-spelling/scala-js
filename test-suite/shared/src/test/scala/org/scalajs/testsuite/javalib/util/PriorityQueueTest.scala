@@ -391,7 +391,7 @@ class PriorityQueueTest extends CollectionTest {
 
   @Test def iteratorRemoveCustomObjectCornerCase(): Unit = {
     /* This tests that when `Iterator.remove()` is supposed to remove an
-     * object, it does not accidentally remove an other object that happens to
+     * object, it does not accidentally remove another object that happens to
      * be `equals` to it (but with a different identity).
      *
      * To be meaningful, this tests requires that the object we are trying to
